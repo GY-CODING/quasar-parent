@@ -39,13 +39,13 @@ pipeline {
 
         stage('Deploy to GitHub Packages') {
             steps {
-                withCredentials([file(credentialsId: 'SETTINGS_QUASAR_PARENT', variable: 'SETTINGS_QUASAR_PARENT')]) {
+                withCredentials([file(credentialsId: 'SETTINGS_QUASAR', variable: 'SETTINGS_QUASAR')]) {
                     sh '''
                         export JAVA_HOME=$PWD/.jdk
                         export PATH=$JAVA_HOME/bin:$PWD/.maven/bin:$PATH
                         java -version
                         mvn -v
-                        mvn clean deploy --settings "$SETTINGS_QUASAR_PARENT"
+                        mvn clean deploy --settings "$SETTINGS_QUASAR"
                     '''
                 }
             }
