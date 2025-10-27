@@ -3,9 +3,9 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gycoding</groupId>
+    <groupId>org.gycoding</groupId>
     <artifactId>quasar-parent</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -23,9 +23,6 @@
 
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <lombok.version>1.18.32</lombok.version>
-        <dotenv.version>5.2.2</dotenv.version>
-        <gy.exceptions.version>1.1.6</gy.exceptions.version>
-        <gy.logs.version>1.0.1</gy.logs.version>
     </properties>
 
     <dependencyManagement>
@@ -81,26 +78,6 @@
                 <artifactId>mapstruct</artifactId>
                 <version>${mapstruct.version}</version>
                 <scope>compile</scope>
-            </dependency>
-
-            <!-- Dotenv Dependencies -->
-            <dependency>
-                <groupId>io.github.cdimascio</groupId>
-                <artifactId>java-dotenv</artifactId>
-                <version>${dotenv.version}</version>
-            </dependency>
-
-            <!-- GYCODING Dependencies -->
-            <dependency>
-                <groupId>org.gycoding</groupId>
-                <artifactId>spring-exceptions</artifactId>
-                <version>${gy.exceptions.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.gycoding</groupId>
-                <artifactId>spring-logs</artifactId>
-                <version>${gy.logs.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
